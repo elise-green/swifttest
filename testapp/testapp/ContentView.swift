@@ -8,22 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var selectedTab: Tabs = .home
     var body: some View {
         // Vertical stack layout
-     
-       
+        
+        
             VStack {
-                Button("Tap on Me") {
-                    print("Hello")
-                }
+    
                 ScrollView{
                     ForEach(1 ... 10, id: \.self) { i in
-                        Image("Plant")
-                            .resizable()
-                            .frame(width: 200.0, height: 300.0)
-                            .imageScale(.small)
-                            .cornerRadius(20)
-                                        }
+                        VStack{
+                            Image("C-Firma")
+                                .resizable()
+                                .frame(width: 250.0, height: 300.0)
+                                .imageScale(.small)
+                                .cornerRadius(20)
+                            
+                            Link("Drunk Elephant C-Firma", destination: URL(string: "https://www.drunkelephant.ca/collections/best-sellers/c-firma-fresh-day-serum-812343034358.html?cgid=products-allproducts-bestsellers")!)
+                            
+                        }
+                    }
                 }
                 Text("SkinCare")
                     .font(.title)
@@ -32,7 +37,8 @@ struct ContentView: View {
                     .padding()
                 
             }
-            .padding()
+        Spacer()
+        CustomerTabBar(selectedTab: $selectedTab)
         }
     }
 

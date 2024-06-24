@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C054DA92C2921E8000E4FF0 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C054DA82C2921E8000E4FF0 /* SwiftUIView.swift */; };
+		5C054DAF2C292C16000E4FF0 /* CustomerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C054DAE2C292C16000E4FF0 /* CustomerTabBar.swift */; };
+		5C054DB52C2938A6000E4FF0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C054DB42C2938A6000E4FF0 /* CustomButton.swift */; };
 		5C32588B2C28EA1D00B46DB8 /* testappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C32588A2C28EA1D00B46DB8 /* testappApp.swift */; };
 		5C32588D2C28EA1D00B46DB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C32588C2C28EA1D00B46DB8 /* ContentView.swift */; };
 		5C32588F2C28EA1E00B46DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C32588E2C28EA1E00B46DB8 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C054DA82C2921E8000E4FF0 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		5C054DAE2C292C16000E4FF0 /* CustomerTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTabBar.swift; sourceTree = "<group>"; };
+		5C054DB42C2938A6000E4FF0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5C3258872C28EA1D00B46DB8 /* testapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C32588A2C28EA1D00B46DB8 /* testappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testappApp.swift; sourceTree = "<group>"; };
 		5C32588C2C28EA1D00B46DB8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +102,9 @@
 			children = (
 				5C32588A2C28EA1D00B46DB8 /* testappApp.swift */,
 				5C32588C2C28EA1D00B46DB8 /* ContentView.swift */,
+				5C054DB42C2938A6000E4FF0 /* CustomButton.swift */,
+				5C054DA82C2921E8000E4FF0 /* SwiftUIView.swift */,
+				5C054DAE2C292C16000E4FF0 /* CustomerTabBar.swift */,
 				5C32588E2C28EA1E00B46DB8 /* Assets.xcassets */,
 				5C3258902C28EA1E00B46DB8 /* Preview Content */,
 			);
@@ -258,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C32588D2C28EA1D00B46DB8 /* ContentView.swift in Sources */,
+				5C054DAF2C292C16000E4FF0 /* CustomerTabBar.swift in Sources */,
 				5C32588B2C28EA1D00B46DB8 /* testappApp.swift in Sources */,
+				5C054DA92C2921E8000E4FF0 /* SwiftUIView.swift in Sources */,
+				5C054DB52C2938A6000E4FF0 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
