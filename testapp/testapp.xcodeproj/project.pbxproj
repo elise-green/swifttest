@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C054DA92C2921E8000E4FF0 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C054DA82C2921E8000E4FF0 /* SwiftUIView.swift */; };
+		5C054DA92C2921E8000E4FF0 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C054DA82C2921E8000E4FF0 /* CameraView.swift */; };
 		5C054DAF2C292C16000E4FF0 /* CustomerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C054DAE2C292C16000E4FF0 /* CustomerTabBar.swift */; };
-		5C054DB52C2938A6000E4FF0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C054DB42C2938A6000E4FF0 /* CustomButton.swift */; };
 		5C32588B2C28EA1D00B46DB8 /* testappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C32588A2C28EA1D00B46DB8 /* testappApp.swift */; };
 		5C32588D2C28EA1D00B46DB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C32588C2C28EA1D00B46DB8 /* ContentView.swift */; };
 		5C32588F2C28EA1E00B46DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C32588E2C28EA1E00B46DB8 /* Assets.xcassets */; };
@@ -17,6 +16,9 @@
 		5C32589C2C28EA1E00B46DB8 /* testappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C32589B2C28EA1E00B46DB8 /* testappTests.swift */; };
 		5C3258A62C28EA1E00B46DB8 /* testappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3258A52C28EA1E00B46DB8 /* testappUITests.swift */; };
 		5C3258A82C28EA1E00B46DB8 /* testappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3258A72C28EA1E00B46DB8 /* testappUITestsLaunchTests.swift */; };
+		C173876A2C3B0A0700502877 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17387692C3B0A0700502877 /* HomeView.swift */; };
+		C173876C2C3B0A4000502877 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C173876B2C3B0A4000502877 /* ProductView.swift */; };
+		C173876E2C3B0B1800502877 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C173876D2C3B0B1800502877 /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5C054DA82C2921E8000E4FF0 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		5C054DA82C2921E8000E4FF0 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		5C054DAE2C292C16000E4FF0 /* CustomerTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTabBar.swift; sourceTree = "<group>"; };
-		5C054DB42C2938A6000E4FF0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5C3258872C28EA1D00B46DB8 /* testapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C32588A2C28EA1D00B46DB8 /* testappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testappApp.swift; sourceTree = "<group>"; };
 		5C32588C2C28EA1D00B46DB8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +51,9 @@
 		5C3258A12C28EA1E00B46DB8 /* testappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C3258A52C28EA1E00B46DB8 /* testappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testappUITests.swift; sourceTree = "<group>"; };
 		5C3258A72C28EA1E00B46DB8 /* testappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C17387692C3B0A0700502877 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C173876B2C3B0A4000502877 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		C173876D2C3B0B1800502877 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +106,10 @@
 			children = (
 				5C32588A2C28EA1D00B46DB8 /* testappApp.swift */,
 				5C32588C2C28EA1D00B46DB8 /* ContentView.swift */,
-				5C054DB42C2938A6000E4FF0 /* CustomButton.swift */,
-				5C054DA82C2921E8000E4FF0 /* SwiftUIView.swift */,
+				C17387692C3B0A0700502877 /* HomeView.swift */,
+				C173876D2C3B0B1800502877 /* ChatView.swift */,
+				C173876B2C3B0A4000502877 /* ProductView.swift */,
+				5C054DA82C2921E8000E4FF0 /* CameraView.swift */,
 				5C054DAE2C292C16000E4FF0 /* CustomerTabBar.swift */,
 				5C32588E2C28EA1E00B46DB8 /* Assets.xcassets */,
 				5C3258902C28EA1E00B46DB8 /* Preview Content */,
@@ -269,8 +275,10 @@
 				5C32588D2C28EA1D00B46DB8 /* ContentView.swift in Sources */,
 				5C054DAF2C292C16000E4FF0 /* CustomerTabBar.swift in Sources */,
 				5C32588B2C28EA1D00B46DB8 /* testappApp.swift in Sources */,
-				5C054DA92C2921E8000E4FF0 /* SwiftUIView.swift in Sources */,
-				5C054DB52C2938A6000E4FF0 /* CustomButton.swift in Sources */,
+				C173876A2C3B0A0700502877 /* HomeView.swift in Sources */,
+				C173876E2C3B0B1800502877 /* ChatView.swift in Sources */,
+				C173876C2C3B0A4000502877 /* ProductView.swift in Sources */,
+				5C054DA92C2921E8000E4FF0 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

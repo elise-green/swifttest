@@ -8,7 +8,7 @@
 import SwiftUI
 import PhotosUI
 
-struct SwiftUIView: View {
+struct CameraView: View {
     
     @State private var selectedItem: PhotosPickerItem?
     @State var image: UIImage?
@@ -37,7 +37,7 @@ struct SwiftUIView: View {
 }
 
 #Preview {
-    SwiftUIView()
+    CameraView()
 }
 
 
