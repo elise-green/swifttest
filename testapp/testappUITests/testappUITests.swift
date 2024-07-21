@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import CoreData
+
 
 final class testappUITests: XCTestCase {
 

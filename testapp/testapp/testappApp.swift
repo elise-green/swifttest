@@ -4,7 +4,7 @@
 //
 //  Created by LOGIN on 2024-06-23.
 //
-
+import CoreData
 import SwiftUI
 
 @main

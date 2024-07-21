@@ -7,6 +7,8 @@
 
 import SwiftUI
 import PhotosUI
+import CoreData
+
 
 struct CameraView: View {
     

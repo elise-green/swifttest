@@ -6,6 +6,9 @@
 //
 
 import XCTest
+import CoreData
+
+
 @testable import testapp
 
 final class testappTests: XCTestCase {

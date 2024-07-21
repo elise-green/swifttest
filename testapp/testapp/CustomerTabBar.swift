@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import CoreData
+
 
 enum Tabs: Int {
     case home = 0
