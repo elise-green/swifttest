@@ -19,7 +19,6 @@
 		C173876A2C3B0A0700502877 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17387692C3B0A0700502877 /* HomeView.swift */; };
 		C173876C2C3B0A4000502877 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C173876B2C3B0A4000502877 /* ProductView.swift */; };
 		C173876E2C3B0B1800502877 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C173876D2C3B0B1800502877 /* ChatView.swift */; };
-		FB3254AE2C4D629E00EDC5D1 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB3254AC2C4D629E00EDC5D1 /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +54,6 @@
 		C17387692C3B0A0700502877 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C173876B2C3B0A4000502877 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		C173876D2C3B0B1800502877 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		FB3254AD2C4D629E00EDC5D1 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +84,6 @@
 		5C32587E2C28EA1D00B46DB8 = {
 			isa = PBXGroup;
 			children = (
-				FB3254AC2C4D629E00EDC5D1 /* DataModel.xcdatamodeld */,
 				5C3258892C28EA1D00B46DB8 /* testapp */,
 				5C32589A2C28EA1E00B46DB8 /* testappTests */,
 				5C3258A42C28EA1E00B46DB8 /* testappUITests */,
@@ -276,7 +273,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C32588D2C28EA1D00B46DB8 /* ContentView.swift in Sources */,
-				FB3254AE2C4D629E00EDC5D1 /* DataModel.xcdatamodeld in Sources */,
 				5C054DAF2C292C16000E4FF0 /* CustomerTabBar.swift in Sources */,
 				5C32588B2C28EA1D00B46DB8 /* testappApp.swift in Sources */,
 				C173876A2C3B0A0700502877 /* HomeView.swift in Sources */,
@@ -612,20 +608,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		FB3254AC2C4D629E00EDC5D1 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FB3254AD2C4D629E00EDC5D1 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = FB3254AD2C4D629E00EDC5D1 /* DataModel.xcdatamodel */;
-			name = DataModel.xcdatamodeld;
-			path = "/Users/nadianafeesa/Monash/summer-project/testapp/DataModel.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 5C32587F2C28EA1D00B46DB8 /* Project object */;
 }
