@@ -6,33 +6,47 @@
 //
 
 import SwiftUI
-import CoreData
-
+import SwiftData
 
 struct ContentView: View {
+    @Environment(\.modelContext)  var context: ModelContext
     
-    @State var selectedTab: Tabs = .home
+    // Correct usage of @Query to fetch User data
+    @Query private var users: [User]
+
+    @State private var selectedTab: Tabs = .home
+
     var body: some View {
-        // Vertical stack layout
-        
-        
-            VStack {
-                switch selectedTab {
-                case .home:
-                    HomeView()
-                case .products:
-                    ProductView()
-                case .chat:
-                    ChatView()
-                case .scan:
-                    CameraView()
-                }
-                
+        VStack {
+            switch selectedTab {
+            case .home:
+                HomeView()
+            case .products:
+                ProductView()
+            case .chat:
+                ChatView()
+            case .scan:
+                CameraView()
             }
-        Spacer()
-        CustomerTabBar(selectedTab: $selectedTab)
+            Spacer()
+            CustomerTabBar(selectedTab: $selectedTab)
+        }
+        .onAppear {
+            addDummyUsers()
         }
     }
+
+    private func addDummyUsers() {
+        let sampleUsers = [
+            User(username: "Nadia", email: "nadia@example.com", skinType: .oily, skinConcerns: ["Acne"], favoriteProducts: ["Cleanser"]),
+            User(username: "Alex", email: "alex@example.com", skinType: .combination, skinConcerns: ["Dryness"], favoriteProducts: ["Hydrating Serum"]),
+            User(username: "Taylor", email: "taylor@example.com", skinType: .normal, skinConcerns: ["Fine Lines"], favoriteProducts: ["Night Cream"])
+        ]
+        for user in sampleUsers {
+            context.insert(user)
+        }
+    }
+}
 
 #Preview {
     ContentView()
