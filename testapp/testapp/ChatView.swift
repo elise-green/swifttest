@@ -11,7 +11,7 @@ import CoreData
 
 struct ChatView: View {
     var body: some View {
-        Text("Chatbot goes here")
+        Text("Chatbot goes here12")
     }
 }
 
