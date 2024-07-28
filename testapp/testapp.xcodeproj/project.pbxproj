@@ -16,6 +16,7 @@
 		5C32589C2C28EA1E00B46DB8 /* testappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C32589B2C28EA1E00B46DB8 /* testappTests.swift */; };
 		5C3258A62C28EA1E00B46DB8 /* testappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3258A52C28EA1E00B46DB8 /* testappUITests.swift */; };
 		5C3258A82C28EA1E00B46DB8 /* testappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3258A72C28EA1E00B46DB8 /* testappUITestsLaunchTests.swift */; };
+		75F8FD032C569953006A3378 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 75F8FD022C569953006A3378 /* OpenAI */; };
 		C173876A2C3B0A0700502877 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17387692C3B0A0700502877 /* HomeView.swift */; };
 		C173876C2C3B0A4000502877 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C173876B2C3B0A4000502877 /* ProductView.swift */; };
 		C173876E2C3B0B1800502877 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C173876D2C3B0B1800502877 /* ChatView.swift */; };
@@ -65,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F8FD032C569953006A3378 /* OpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +95,7 @@
 				5C32589A2C28EA1E00B46DB8 /* testappTests */,
 				5C3258A42C28EA1E00B46DB8 /* testappUITests */,
 				5C3258882C28EA1D00B46DB8 /* Products */,
+				75F8FD012C569953006A3378 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +151,13 @@
 			path = testappUITests;
 			sourceTree = "<group>";
 		};
+		75F8FD012C569953006A3378 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FBB11A7F2C554EE70073465C /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,9 @@
 			dependencies = (
 			);
 			name = testapp;
+			packageProductDependencies = (
+				75F8FD022C569953006A3378 /* OpenAI */,
+			);
 			productName = testapp;
 			productReference = 5C3258872C28EA1D00B46DB8 /* testapp.app */;
 			productType = "com.apple.product-type.application";
@@ -244,6 +257,9 @@
 				Base,
 			);
 			mainGroup = 5C32587E2C28EA1D00B46DB8;
+			packageReferences = (
+				75F8FD002C569943006A3378 /* XCRemoteSwiftPackageReference "OpenAI" */,
+			);
 			productRefGroup = 5C3258882C28EA1D00B46DB8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -624,6 +640,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		75F8FD002C569943006A3378 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75F8FD022C569953006A3378 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75F8FD002C569943006A3378 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5C32587F2C28EA1D00B46DB8 /* Project object */;
 }
