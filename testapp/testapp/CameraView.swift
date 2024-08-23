@@ -12,34 +12,92 @@ import CoreData
 
 struct CameraView: View {
     
+    @State public var image: UIImage? = nil
+    @State private var isCustomCameraViewPresented = false
     @State private var selectedItem: PhotosPickerItem?
-    @State var image: UIImage?
-   
-    var body: some View {
     
-        VStack {
-            PhotosPicker("Select an image", selection: $selectedItem, matching: .images)
-                .onChange(of: selectedItem) {
-                    Task {
-                        if let data = try? await selectedItem?.loadTransferable(type: Data.self) {
-                            image = UIImage(data: data)
-                        }
-                        print("Failed to load the image")
-                    }
-                }
+    
+    
+    
+    var body: some View {
+        ZStack {
             
-            if let image {
-             Image(uiImage: image)
+            if image != nil {
+                Image(uiImage: image!)
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
+                    .ignoresSafeArea()
             }
+            
+            VStack(alignment: .trailing) {
+                
+                Spacer()
+                
+        
+                
+                HStack(alignment: .top) {
+                    
+                    Button(action: { isCustomCameraViewPresented.toggle()
+                        
+                    }, label: {
+                        Image(systemName: "camera.fill")
+                            .frame(width: 100)
+                            .font(.largeTitle)
+                            .padding()
+                            .background(.accent)
+                            .foregroundColor(.white)
+                            .clipShape(Circle())
+                        
+                        
+                        
+                        
+                    })
+                    .padding(.bottom)
+                    .sheet(isPresented: $isCustomCameraViewPresented, content: {
+                        CustomCameraView(capturedImage: $image)
+                    })
+                    
+                    PhotosPicker(
+                        selection: $selectedItem,
+                        matching: .images,
+                        photoLibrary: .shared()) {
+                            Image(systemName: "photo.artframe")
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.accent)
+                                .clipShape(Circle())
+                        }
+                        .onChange(of: selectedItem, initial: false) { oldValue, newValue in
+                            if let newValue {
+                                Task {
+                                    if let data = try? await newValue.loadTransferable(type: Data.self),
+                                       let uiImage = UIImage(data: data) {
+                                        image = uiImage
+                                    }
+                                }
+                            }
+                        }
+
+
+                    
+                }
+                
+                
+                
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 30)
+            
         }
-        .padding()
     }
 }
 
-#Preview {
-    CameraView()
+
+
+
+struct ContentViewfr_Previews: PreviewProvider {
+    static var previews: some View {
+        CameraView()
+    }
 }
-
-
