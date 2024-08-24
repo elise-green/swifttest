@@ -14,6 +14,7 @@ struct CameraView: View {
     
     @State public var image: UIImage? = nil
     @State private var isCustomCameraViewPresented = false
+    @State private var isRetakeViewPresented = false
     @State private var selectedItem: PhotosPickerItem?
     
     
@@ -74,12 +75,14 @@ struct CameraView: View {
                                     if let data = try? await newValue.loadTransferable(type: Data.self),
                                        let uiImage = UIImage(data: data) {
                                         image = uiImage
+                                        isRetakeViewPresented.toggle()
                                     }
                                 }
                             }
                         }
-
-
+                    
+                    
+                    
                     
                 }
                 
@@ -88,6 +91,9 @@ struct CameraView: View {
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 30)
+            .sheet(isPresented: $isRetakeViewPresented) {
+                RetakeView(image: image)  
+            }
             
         }
     }
