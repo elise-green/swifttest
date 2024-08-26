@@ -16,6 +16,8 @@ class User: Identifiable {
     @Attribute var skinType: SkinType
     @Attribute var skinConcerns: [String]
     @Attribute var favoriteProducts: [String]
+    @Attribute var acneCount: Int
+//    @Attribute var acneLevel: [String]
 
     init(username: String, email: String, skinType: SkinType, skinConcerns: [String] = [], favoriteProducts: [String] = []) {
         self.id = UUID()
@@ -24,6 +26,8 @@ class User: Identifiable {
         self.skinType = skinType
         self.skinConcerns = skinConcerns
         self.favoriteProducts = favoriteProducts
+        self.acneCount = 0
+//        self.acneCount = [] // add logic to choose acne level from acne count
     }
 }
 
@@ -35,4 +39,6 @@ enum SkinType: String, Codable {
     var displayName: String {
         return self.rawValue
     }
+    
+    
 }

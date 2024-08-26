@@ -9,13 +9,15 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext)  var context: ModelContext
+    @Environment(\.modelContext) var context: ModelContext
     
-    // Correct usage of @Query to fetch User data
+    // Query for Users and Products
     @Query private var users: [User]
-
+    @Query private var products: [Product]
+    
     @State private var selectedTab: Tabs = .home
-
+    
+    // bottom tab bar
     var body: some View {
         VStack {
             switch selectedTab {
@@ -30,20 +32,6 @@ struct ContentView: View {
             }
             Spacer()
             CustomerTabBar(selectedTab: $selectedTab)
-        }
-        .onAppear {
-            addDummyUsers()
-        }
-    }
-
-    private func addDummyUsers() {
-        let sampleUsers = [
-            User(username: "Nadia", email: "nadia@example.com", skinType: .oily, skinConcerns: ["Acne"], favoriteProducts: ["Cleanser"]),
-            User(username: "Alex", email: "alex@example.com", skinType: .combination, skinConcerns: ["Dryness"], favoriteProducts: ["Hydrating Serum"]),
-            User(username: "Taylor", email: "taylor@example.com", skinType: .normal, skinConcerns: ["Fine Lines"], favoriteProducts: ["Night Cream"])
-        ]
-        for user in sampleUsers {
-            context.insert(user)
         }
     }
 }
