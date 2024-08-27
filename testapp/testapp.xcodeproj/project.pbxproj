@@ -57,6 +57,7 @@
 		5C3258A12C28EA1E00B46DB8 /* testappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C3258A52C28EA1E00B46DB8 /* testappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testappUITests.swift; sourceTree = "<group>"; };
 		5C3258A72C28EA1E00B46DB8 /* testappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5CFE9FDC2C7E6C170018926E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7528CF602C784DA800A9F8A1 /* CameraServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraServiceView.swift; sourceTree = "<group>"; };
 		7528CF622C784DC700A9F8A1 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		7528CF642C784E4800A9F8A1 /* RetakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetakeView.swift; sourceTree = "<group>"; };
@@ -118,6 +119,7 @@
 		5C3258892C28EA1D00B46DB8 /* testapp */ = {
 			isa = PBXGroup;
 			children = (
+				5CFE9FDC2C7E6C170018926E /* Info.plist */,
 				5C32588A2C28EA1D00B46DB8 /* testappApp.swift */,
 				5C32588C2C28EA1D00B46DB8 /* ContentView.swift */,
 				C17387692C3B0A0700502877 /* HomeView.swift */,
@@ -489,10 +491,10 @@
 				DEVELOPMENT_TEAM = 5B482U37ZX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = testapp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Takes photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -519,10 +521,10 @@
 				DEVELOPMENT_TEAM = 5B482U37ZX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = testapp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Takes photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

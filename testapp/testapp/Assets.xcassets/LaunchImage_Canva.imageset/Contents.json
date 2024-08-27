@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "repAIr skin iOS launch screen.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -13,7 +14,6 @@
       "scale" : "3x"
     },
     {
-      "filename" : "repAIr skin iOS launch screen.jpg",
       "idiom" : "iphone",
       "scale" : "1x"
     },
