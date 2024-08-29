@@ -24,6 +24,9 @@
 		C173876C2C3B0A4000502877 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C173876B2C3B0A4000502877 /* ProductView.swift */; };
 		C173876E2C3B0B1800502877 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C173876D2C3B0B1800502877 /* ChatView.swift */; };
 		C1A601C82C80CFEC005D6507 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A601C72C80CFEC005D6507 /* Product.swift */; };
+		C1A601CC2C80DC01005D6507 /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A601CB2C80DC01005D6507 /* Detector.swift */; };
+		C1A601CE2C80DCA5005D6507 /* acnedetector.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = C1A601CD2C80DCA5005D6507 /* acnedetector.mlpackage */; };
+		C1A601D02C80F0EA005D6507 /* GeometryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A601CF2C80F0EA005D6507 /* GeometryUtils.swift */; };
 		FB66CAEE2C555C1700F08852 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66CAED2C555C1700F08852 /* User.swift */; };
 		FBB11A812C5552170073465C /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB11A802C5552170073465C /* UserProfileView.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +69,9 @@
 		C173876B2C3B0A4000502877 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		C173876D2C3B0B1800502877 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		C1A601C72C80CFEC005D6507 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		C1A601CB2C80DC01005D6507 /* Detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
+		C1A601CD2C80DCA5005D6507 /* acnedetector.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = acnedetector.mlpackage; path = ../../../swifttest/testapp/testapp/acnedetector.mlpackage; sourceTree = "<group>"; };
+		C1A601CF2C80F0EA005D6507 /* GeometryUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryUtils.swift; sourceTree = "<group>"; };
 		FB66CAED2C555C1700F08852 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FBB11A802C5552170073465C /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +138,9 @@
 				7528CF602C784DA800A9F8A1 /* CameraServiceView.swift */,
 				7528CF622C784DC700A9F8A1 /* CustomCameraView.swift */,
 				5C054DAE2C292C16000E4FF0 /* CustomerTabBar.swift */,
+				C1A601CF2C80F0EA005D6507 /* GeometryUtils.swift */,
+				C1A601CB2C80DC01005D6507 /* Detector.swift */,
+				C1A601CD2C80DCA5005D6507 /* acnedetector.mlpackage */,
 				FBB11A802C5552170073465C /* UserProfileView.swift */,
 				5C32588E2C28EA1E00B46DB8 /* Assets.xcassets */,
 				5C3258902C28EA1E00B46DB8 /* Preview Content */,
@@ -317,14 +326,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C32588D2C28EA1D00B46DB8 /* ContentView.swift in Sources */,
+				C1A601CC2C80DC01005D6507 /* Detector.swift in Sources */,
 				FBB11A812C5552170073465C /* UserProfileView.swift in Sources */,
 				5C054DAF2C292C16000E4FF0 /* CustomerTabBar.swift in Sources */,
 				5C32588B2C28EA1D00B46DB8 /* testappApp.swift in Sources */,
 				C173876A2C3B0A0700502877 /* HomeView.swift in Sources */,
+				C1A601CE2C80DCA5005D6507 /* acnedetector.mlpackage in Sources */,
 				7528CF612C784DA800A9F8A1 /* CameraServiceView.swift in Sources */,
 				7528CF652C784E4800A9F8A1 /* RetakeView.swift in Sources */,
 				FB66CAEE2C555C1700F08852 /* User.swift in Sources */,
 				7528CF632C784DC700A9F8A1 /* CustomCameraView.swift in Sources */,
+				C1A601D02C80F0EA005D6507 /* GeometryUtils.swift in Sources */,
 				C173876E2C3B0B1800502877 /* ChatView.swift in Sources */,
 				C173876C2C3B0A4000502877 /* ProductView.swift in Sources */,
 				5C054DA92C2921E8000E4FF0 /* CameraView.swift in Sources */,
@@ -492,7 +504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"testapp/Preview Content\"";
-				DEVELOPMENT_TEAM = 6YY9CVTT64;
+				DEVELOPMENT_TEAM = 3G62L885W9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testapp/Info.plist;
@@ -522,7 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"testapp/Preview Content\"";
-				DEVELOPMENT_TEAM = 6YY9CVTT64;
+				DEVELOPMENT_TEAM = 3G62L885W9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testapp/Info.plist;
