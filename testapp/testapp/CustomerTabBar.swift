@@ -14,6 +14,7 @@ enum Tabs: Int {
     case products = 1
     case scan = 2
     case chat = 3
+    case profile = 4
     
 }
 
@@ -57,6 +58,15 @@ struct CustomerTabBar: View {
                 VStack {
                     Image(systemName: "message")
                     Text("Chat")
+                }
+            }
+            
+            Button {
+                selectedTab = .profile
+            } label: {
+                VStack {
+                    Image(systemName: "user")
+                    Text("Profile")
                 }
             }
         }

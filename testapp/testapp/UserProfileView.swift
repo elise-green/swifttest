@@ -10,6 +10,10 @@ import SwiftUI
 import SwiftData
 
 struct UserProfileListView: View {
+    
+    // State to manage the selected tab
+    @State private var selectedTab: Tabs = .profile
+    
     // Sample dummy user data
     @State private var users = [
         User(
