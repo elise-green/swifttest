@@ -16,6 +16,8 @@ struct testappApp: App {
         // Initialize the container
         let mySchema = Schema([User.self, Product.self]) // Include both User and Product models in the schema
         container = try! ModelContainer(for: mySchema)
+
+        
         
         // Initialize sample data
         addSampleData()
