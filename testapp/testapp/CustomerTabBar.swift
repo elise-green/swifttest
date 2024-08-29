@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import CoreData
-
 
 enum Tabs: Int {
     case home = 0
@@ -15,7 +13,6 @@ enum Tabs: Int {
     case scan = 2
     case chat = 3
     case profile = 4
-    
 }
 
 struct CustomerTabBar: View {
@@ -31,6 +28,8 @@ struct CustomerTabBar: View {
                 VStack {
                     Image(systemName: "house")
                     Text("Home")
+                        .font(.caption) // Smaller font to avoid cutoff
+                        .lineLimit(1) // Ensure text doesn't wrap
                 }
             }
             
@@ -40,6 +39,8 @@ struct CustomerTabBar: View {
                 VStack {
                     Image(systemName: "camera")
                     Text("Scan")
+                        .font(.caption)
+                        .lineLimit(1)
                 }
             }
             
@@ -49,6 +50,8 @@ struct CustomerTabBar: View {
                 VStack {
                     Image(systemName: "bag")
                     Text("Products")
+                        .font(.caption)
+                        .lineLimit(1)
                 }
             }
             
@@ -58,6 +61,8 @@ struct CustomerTabBar: View {
                 VStack {
                     Image(systemName: "message")
                     Text("Chat")
+                        .font(.caption)
+                        .lineLimit(1)
                 }
             }
             
@@ -65,8 +70,10 @@ struct CustomerTabBar: View {
                 selectedTab = .profile
             } label: {
                 VStack {
-                    Image(systemName: "user")
+                    Image(systemName: "person.circle")
                     Text("Profile")
+                        .font(.caption)
+                        .lineLimit(1)
                 }
             }
         }

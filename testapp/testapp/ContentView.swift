@@ -29,6 +29,8 @@ struct ContentView: View {
                 ChatView()
             case .scan:
                 CameraView()
+            case .profile:
+                UserProfileListView()
             }
             Spacer()
             CustomerTabBar(selectedTab: $selectedTab)
