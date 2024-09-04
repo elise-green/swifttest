@@ -16,7 +16,7 @@ struct RetakeView: View {
     @State private var showResults = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 if let image = image {
                     Image(uiImage: image)
@@ -26,12 +26,11 @@ struct RetakeView: View {
                 } else {
                     Color.gray.ignoresSafeArea()
                 }
-                
+
                 VStack {
                     Spacer()
-                    
+
                     HStack {
-                        
                         Button("Retake") {
                             isCameraViewPresented.toggle()
                         }
@@ -41,30 +40,29 @@ struct RetakeView: View {
                         .foregroundColor(.white)
                         .clipShape(Capsule())
                         .padding(.bottom)
-                        
-                        NavigationLink(
-                            destination: ResultsView(processedImage: confirmedImage ?? UIImage()),
-                            isActive: $showResults
-                        ) {
-                            Button("Use") {
-                                if let image = image {
-                                    confirmedImage = processImageWithBoundingBoxes(image)
-                                    self.showResults = true
-                                }
+
+                        Button("Use") {
+                            if let image = image {
+                                confirmedImage = processImageWithBoundingBoxes(image)
+                                self.showResults = true
                             }
-                            .font(.title)
-                            .padding()
-                            .background(Color("AccentColor"))
-                            .foregroundColor(.white)
-                            .clipShape(Capsule())
                         }
+                        .font(.title)
+                        .padding()
+                        .background(Color("AccentColor"))
+                        .foregroundColor(.white)
+                        .clipShape(Capsule())
                     }
                 }
             }
             .sheet(isPresented: $isCameraViewPresented) {
                 CameraView()
             }
+            .navigationDestination(isPresented: $showResults) {
+                ResultsView(processedImage: confirmedImage ?? UIImage())
+            }
         }
+
     }
     
     // Function to handle CoreML processing and drawing bounding boxes
