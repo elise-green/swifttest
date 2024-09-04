@@ -9,49 +9,22 @@ import SwiftUI
 
 struct ResultsView: View {
     let processedImage: UIImage
-    let pimpleCount: Int
-    @State private var detectors: [Detector] = []
-    private let detector = ObjectDetector()
     
     var body: some View {
         VStack {
-            Text("Number of Pimples: \(pimpleCount)")
-                .font(.title)
-                .padding()
-            
             Image(uiImage: processedImage)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 262.5, height: 350)
-                .background(Color.gray)
-                .cornerRadius(10)
                 .padding()
             
-            if detectors.isEmpty {
-                Text("Detecting pimples...")
-                    .padding()
-            } else {
-                Text("Detected \(detectors.count) pimples")
-                    .padding()
-                
-                // Display detection results (optional)
-                ForEach(detectors, id: \.label) { detector in
-                    Text("\(detector.label) at \(detector.box)")
-                        .padding()
-                }
-            }
+            Spacer()
         }
-        .navigationTitle("Results")
-        .onAppear {
-            performDetection()
-        }
+        .navigationBarTitle("Detection Results", displayMode: .inline)
     }
-    
-    private func performDetection() {
-        detector.recognize(fromImage: processedImage) { detectedObjects in
-            DispatchQueue.main.async {
-                self.detectors = detectedObjects
-            }
-        }
+}
+
+struct ResultsView_Previews: PreviewProvider {
+    static var previews: some View {
+        ResultsView(processedImage: UIImage())
     }
 }

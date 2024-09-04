@@ -10,30 +10,35 @@ import SwiftData
 @main
 struct testappApp: App {
     // SwiftData container setup
-    let container: ModelContainer
+    let container: ModelContainer?
     
     init() {
         // Initialize the container
         let mySchema = Schema([User.self, Product.self]) // Include both User and Product models in the schema
-        container = try! ModelContainer(for: mySchema)
-
+        
+        do{
+            container = try ModelContainer(for: mySchema)
+            addSampleData()
+        }catch{
+            print(error)
+            container = nil
+        }
         
         
         // Initialize sample data
-        addSampleData()
+
     }
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .modelContainer(container) // Attach the container to the view hierarchy
         }
     }
 
     private func addSampleData() {
         // Perform context operations on the main thread
         Task { @MainActor in
-            let context = container.mainContext
+            let context = container!.mainContext
 
             addDummyUsers(to: context)
             addDummyProducts(to: context)

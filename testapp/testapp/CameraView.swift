@@ -92,7 +92,7 @@ struct CameraView: View {
             .frame(maxWidth: .infinity)
             .padding(.bottom, 30)
             .sheet(isPresented: $isRetakeViewPresented) {
-                RetakeView(image: image)  
+                RetakeView(image: image)
             }
             
         }
