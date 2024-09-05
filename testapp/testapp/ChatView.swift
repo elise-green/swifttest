@@ -11,6 +11,7 @@ import OpenAI
 
 class ChatController: ObservableObject {
     @Published var messages: [Message] = []
+   
     
     let openAI = OpenAI(apiToken: "key")
     
@@ -69,6 +70,7 @@ struct ChatView: View {
                 TextField("Message...", text: self.$string, axis: .vertical)
                     .padding(5)
                     .background(Color.white)
+                    .foregroundColor(Color.black)
                     .cornerRadius(15)
                 Button {
                     self.chatController.sendNewMessage(content: string)
@@ -118,6 +120,6 @@ struct MessageView: View {
 }
 
 #Preview {
-    ContentView()
+    ChatView()
 }
 
